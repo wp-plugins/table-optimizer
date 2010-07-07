@@ -29,8 +29,10 @@ Domain Path: /languages/
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define('OPTIMIZER_INTERVAL', 24 * 60 * 7);
-define('OPTIMIZER_SCHEDULE_HANDLER', 'optimize_table');
+if (!defined('OPTIMIZER_INTERVAL'))
+	define('OPTIMIZER_INTERVAL', 24 * 60 * 7);
+if (!defined('OPTIMIZER_SCHEDULE_HANDLER'))
+	define('OPTIMIZER_SCHEDULE_HANDLER', 'optimize_table');
 
 class OptimizeTable {
 
